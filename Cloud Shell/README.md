@@ -9,5 +9,5 @@ Connect to a high performance virtual machine you will get for free using the go
 ```bash
 curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
 ```
-###Inspired By
+### Inspired By
 https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine
