@@ -1,28 +1,42 @@
-open terminal >htop to view the machine config
+### Make use of gcloud shell terminal
+Connect to a high performance virtual machine you will get for free using the google free tier
 
-8-16 GB RAM machines are alloted
+- Go to Gcloud Shell Terminal
+- Get Auth key from ngork
+- Paste the code
+- Run and connect the system using latest version of nomachine in your windows/mac system
 
+Once connected to the terminal check the conif of your machine 
+
+```bash
+htop
+```
+
+Once you know, its a good system, install the docker file
+
+```bash
+curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
+```
+### Inspired By
 https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine
 
-Copy the code
-Get AutToken from ngork :3213121312trGsdfws_5465KJSFnsdfleJJeslk
+### Using WINE
+Wine is used in ubuntu to run .exe files from windows/mac
 
-Run the system
-
-Install wine in ubuntu for installing exe files
-
-i
+```console
 wine start <filename>.msi
+```
 
+### Using Wget
+Wget is used to download the files directly to system by typing the url
 
-#Install Smart PLS
-
-curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
-
+To Download Smart PLS
+```console
 wget https://www.smartpls.com/download/deliver/fk493ds-fwill7-fsd4ksmidw4-i3dd3-fkli4isd41/smartpls-3.3.9_64bit.msi
-cd Downloads
-wine start smartpls-3.3.9_64bit.msi
+```
+	Downloaded Files will be under "Downloads" Folder
+	```console
+	cd Downloads
+	```
+	
 
-KEY: 
-SMSER-D04A3F84-346E-4BF1-BEF5-253D59E8ED0B
-SMSER-6643309F-F363-4B24-8794-B61116354CC8
