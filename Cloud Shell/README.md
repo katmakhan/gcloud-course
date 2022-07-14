@@ -20,23 +20,23 @@ curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
 ### Inspired By
 https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine
 
-### Using WINE
+### Tool- Using WINE
 Wine is used in ubuntu to run .exe files from windows/mac
 
 ```console
 wine start <filename>.msi
 ```
 
-### Using Wget
+### Tool- Using Wget
 Wget is used to download the files directly to system by typing the url
 
 To Download Smart PLS
 ```console
 wget https://www.smartpls.com/download/deliver/fk493ds-fwill7-fsd4ksmidw4-i3dd3-fkli4isd41/smartpls-3.3.9_64bit.msi
 ```
-	Downloaded Files will be under "Downloads" Folder
-	```console
-	cd Downloads
-	```
+Downloaded Files will be under "Downloads" Folder
+```console
+cd Downloads
+```
 	
 
