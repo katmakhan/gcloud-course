@@ -1,13 +1,13 @@
 # Google Cloud Syllabus
 Google generously provides a well range of FREE TIERS for your pet projects. Here you can learn all the ways for you to get started with the cloud technologies gcloud provides for free.
 
-- `VM` Instance `Ubuntu` with `NO MACHINE`
-
+- [Installing ubuntu inside Google cloud shell](https://github.com/katmakhan/gcloud-course/tree/master/Cloud%20Shell)
 ```bash
 curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
 ```
+- 
 
-- `VPN` SERVER - `Openvpn`
-- Billing Alerts
+- [VPN Server using Openvpn](https://github.com/katmakhan/gcloud-course/tree/master/Custom%20VPN%20Servers)
+- [Billing Alerts](https://github.com/katmakhan/gcloud-course/tree/master/Setting%20Billing%20Alerts)
 - Billing Alerts -- Advance
-- `Iam Admin` Tool for `security`
+- `Iam Admin Tools`

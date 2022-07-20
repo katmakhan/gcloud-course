@@ -1,4 +1,4 @@
-# Using Bitnami Wordpress Installation 
+# Bitnami Wordpress Installation 
 It will be similar for AWS installation from market place also. Do the following steps to ensure that you can import your backup files and restoring them into the wordpress account.
 
 - Connect the bitnami using SSH via Gcloud with a button
@@ -26,7 +26,7 @@ It will be similar for AWS installation from market place also. Do the following
 	```bash
 	ssh -i "gt_website.pem" bitnami@ec2-<public_ip>.ap-south-1.compute.amazonaws.com
 	```
-	After Logged In , Go open the file php.in using nano or vim
+- After Logged In , Go open the file php.in using nano or vim
 	
 	Editing in Nano
 	```bash
@@ -38,7 +38,7 @@ It will be similar for AWS installation from market place also. Do the following
 	vim /opt/bitnami/php/etc/php.ini
 	```
 	
-	Modify the following options in the php.ini file to increase the allowed size for uploads
+- Modify the following options in the php.ini file to increase the allowed size for uploads
 
 	- Search for the post max size
 	` Ctrl`+`w` to search in nano
@@ -68,4 +68,11 @@ It will be similar for AWS installation from market place also. Do the following
 	```bash
 	/opt/bitnami/ctlscript.sh restart
 	```
+	
+- Install All-in-One WP Migration tool in wordpress
+	- Upload the <filename>.wpress file
+	- Max upload size will be 800MB after you change both `post_max_size` and `upload_max_filesize`
+	- wait for the upload to finish
+	- Restore the backup
+	- For future dev, Take backup and store it in `Locally` or `Google drive`
 
