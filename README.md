@@ -1,7 +1,7 @@
 # Google Cloud Syllabus
 Google generously provides a well range of FREE TIERS for your pet projects. Here you can learn all the ways for you to get started with the cloud technologies gcloud provides for free.
 
-- [Installing ubuntu inside Google cloud shell](https://github.com/katmakhan/gcloud-course/tree/master/Cloud%20Shell)
+- [Installing ubuntu inside Google cloud shell](https://github.com/katmakhan/gcloud-course/tree/master/Free%20Ubuntu%20VM-%20Cloud%20Shell)
 ```bash
 curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
 ```

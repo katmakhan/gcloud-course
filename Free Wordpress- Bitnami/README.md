@@ -66,7 +66,7 @@ It will be similar for AWS installation from market place also. Do the following
 	
 - Restart the servers for the changes to take effect.
 	```bash
-	/opt/bitnami/ctlscript.sh restart
+	sudo /opt/bitnami/ctlscript.sh restart
 	```
 	
 - Install All-in-One WP Migration tool in wordpress
