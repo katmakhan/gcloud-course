@@ -76,3 +76,17 @@ It will be similar for AWS installation from market place also. Do the following
 	- Restore the backup
 	- For future dev, Take backup and store it in `Locally` or `Google drive`
 
+- Disbale Wordpress using SSH
+	- Connect to your server via SSH.
+	- Navigate to your websites root folder.
+	- Navigate to the /wp-content folder using the cd command.
+
+		```console
+		cd /opt/bitnami/wordpress/wp-content
+		```
+	- Rename the /plugin folder using the mv command.
+	```console 
+	mv plugin plugin.disable
+	```
+	- All your plugins will now be disabled.
+	- Alternatively you navigate inside of the /plugins folder and rename the plugins individually to disable them one at a time.
