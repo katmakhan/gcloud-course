@@ -86,7 +86,7 @@ It will be similar for AWS installation from market place also. Do the following
 		```
 	- Rename the /plugin folder using the mv command.
 	```console 
-	mv plugin plugin.disable
+	sudo mv plugins plugins.disable
 	```
 	- All your plugins will now be disabled.
 	- Alternatively you navigate inside of the /plugins folder and rename the plugins individually to disable them one at a time.
