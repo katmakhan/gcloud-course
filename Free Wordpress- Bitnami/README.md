@@ -85,8 +85,9 @@ It will be similar for AWS installation from market place also. Do the following
 		cd /opt/bitnami/wordpress/wp-content
 		```
 	- Rename the /plugin folder using the mv command.
-	```console 
-	sudo mv plugins plugins.disable
-	```
+	
+		```console 
+		sudo mv plugins plugins.disable
+		```
 	- All your plugins will now be disabled.
 	- Alternatively you navigate inside of the /plugins folder and rename the plugins individually to disable them one at a time.
