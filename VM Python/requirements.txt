@@ -1,0 +1,6 @@
+requests==2.25.1
+firebase-admin==3.1.0
+pathlib==1.0.1
+fyers-apiv2==2.0.5
+requests-html==0.10.0
+pandas==0.25.1
