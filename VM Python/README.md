@@ -71,6 +71,7 @@ tmux ls
 ```bash
 tmux attach -t sessionname
 ```
+	Some of the keyboard shortcuts are:
 	- Dettach from session
 	```
 	Keybord shortcut : crt+b d
@@ -122,13 +123,12 @@ tmux rename-session -t oldname newname
 
 ## Troubleshooting
 - Follow some of the trouble shooting tips
-	-Upgrade the apt get
-	-Install the new python
+	- Upgrade the apt get and Install the new python
 	```bash
 	sudo apt-get update && sudo apt-get upgrade
 	sudo apt install python3.7
 	```
-	-Upgrade pip
+	- Upgrade pip
 	```bash
 	pip3 install --upgrade pip
 	```	
