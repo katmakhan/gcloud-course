@@ -63,6 +63,10 @@ These are some of the tmux commands that you want to know, to preserve the state
 ```bash
 tmux new -s sessionname
 ```
+- Renaming session
+```bash
+tmux rename-session -t oldname newname
+```
 - Listing all tmux sessions
 ```bash
 tmux ls
@@ -71,6 +75,15 @@ tmux ls
 ```bash
 tmux attach -t sessionname
 ```
+- Killing a session
+```bash
+tmux kill-session -t sessionname
+```
+- Kill every tmux session
+```bash
+tmux kill-server
+```
+
 - Some of the keyboard shortcuts are:
 	- Dettach from session
 	```
@@ -100,20 +113,6 @@ tmux attach -t sessionname
 	```
 	Keybord shortcut : crt+b x
 	```
-
-- Killing a session
-```bash
-tmux kill-session -t sessionname
-```
-- Kill every tmux session
-```bash
-tmux kill-server
-```
-
-- Renaming session
-```bash
-tmux rename-session -t oldname newname
-```
 
 
 ## Main Issues
