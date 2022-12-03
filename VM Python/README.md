@@ -71,7 +71,7 @@ tmux ls
 ```bash
 tmux attach -t sessionname
 ```
-	Some of the keyboard shortcuts are:
+- Some of the keyboard shortcuts are:
 	- Dettach from session
 	```
 	Keybord shortcut : crt+b d
