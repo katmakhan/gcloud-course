@@ -5,6 +5,10 @@ Create an VM-instance in the US-Central1 area and SSH into the machine
 ```bash
 sudo apt install python
 ```
+- Installing Python3
+```bash
+sudo apt install python3
+```
 - Installing PIP
 ```bash
 sudo apt install pip
@@ -121,13 +125,18 @@ tmux kill-server
 - Stuck at grpcio
 
 ## Troubleshooting
+- Before install 3.7, we should have to install python 3.6 by running the following command.
+```bash
+sudo apt-get install python3.6
+sudo apt-get install python3.7
+```
 - Follow some of the trouble shooting tips
 	- Upgrade the apt get and Install the new python
 	```bash
 	sudo apt-get update && sudo apt-get upgrade
 	sudo apt install python3.7
 	```
-	- Upgrade pip
+	- Upgrade pip- This works most of the time, when stuck at grpcio
 	```bash
 	pip3 install --upgrade pip
 	```	
@@ -147,4 +156,8 @@ tmux kill-server
 	- Installing without using cache
 	```bash
 	pip3 install -r requirements.txt --no-cache-dir
+	```
+	- Change the python version from 3.6 to 3.7
+	```bash
+	sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
 	```
