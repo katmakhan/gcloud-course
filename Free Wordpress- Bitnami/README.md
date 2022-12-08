@@ -91,3 +91,19 @@ It will be similar for AWS installation from market place also. Do the following
 		```
 	- All your plugins will now be disabled.
 	- Alternatively you navigate inside of the /plugins folder and rename the plugins individually to disable them one at a time.
+
+## Troubleshoooting when installing the backup from the instance
+
+- To check status of bitnami
+```bash
+sudo /opt/bitnami/ctlscript.sh status
+```
+- To stop all services
+```bash
+sudo /opt/bitnami/ctlscript.sh stop
+```
+- To restart the scripts
+```bash
+sudo /opt/bitnami/ctlscript.sh restart
+```
+
