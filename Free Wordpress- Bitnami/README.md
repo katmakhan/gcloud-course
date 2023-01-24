@@ -42,6 +42,8 @@ It will be similar for AWS installation from market place also. Do the following
 
 	- Search for the post max size
 	` Ctrl`+`w` to search in nano
+	- If you are using SSH Terminal in browser in GCP, that will close the terminal
+	- So use the "send key combinations" icon on the top right of the SHH terminal
 	
 	- Search for
 	```console
