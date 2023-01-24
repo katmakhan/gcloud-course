@@ -109,3 +109,12 @@ sudo /opt/bitnami/ctlscript.sh stop
 sudo /opt/bitnami/ctlscript.sh restart
 ```
 
+## Houzez Theme Requirements
+Recommended PHP Configuration Limits
+```
+max_execution_time 600
+memory_limit 128M
+post_max_size 48M
+upload_max_filesize 48M
+```
+
