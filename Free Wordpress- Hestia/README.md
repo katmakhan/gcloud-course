@@ -46,6 +46,11 @@ bash hst-install.sh
 - Setup new `A` record with `hcp` and enter the `static ip` you get from GCP, in the instance manager
 - Don't use normal IP, that will change, so make sure to change the external IP to `reserve static IP` in `VPC Network` section in GCP
 
+### Login to hestia at the specified port
+- Specify the port and also the `login` path
+```
+https://hcp.<domain.com>:2083/login/
+```
 
 ### Setting Up Hestia
 - Login to hestia with admin or use the SSH terminal to reset the password
