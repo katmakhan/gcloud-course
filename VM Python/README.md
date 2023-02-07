@@ -1,26 +1,18 @@
 # Google Cloud VM Instance for Python
 Create an VM-instance in the US-Central1 area and SSH into the machine
 
-- Installing Python
-```bash
-sudo apt install python
-```
-- Installing Python3
-```bash
-sudo apt install python3
-```
 - Installing PIP
 ```bash
-sudo apt install pip
+sudo apt install pip -y
 ```
+- Upgrade PIP
 ```bash
-sudo apt install pip3
+pip install --upgrade pip
 ```
 - Installing git
 ```bash
-sudo apt install git
+sudo apt install git -y
 ```
-
 - Make new Dir
 ```bash
 mkdir newfolder
@@ -50,8 +42,6 @@ cd newfolder
 - Intalling via requirements
 ```bash
 pip install -r requirements.txt
-or 
-pip3 install -r requirements.txt
 ```
 - Chaning the default python
 ```bash
@@ -147,15 +137,15 @@ sudo apt-get install python3.7
 	```
 	- Downgrade setuptools
 	```bash
-	python3 -m pip install --upgrade setuptools==49.6.0
+	python -m pip install --upgrade setuptools==49.6.0
 	```
 	- Installing grpcio seperately, as 1.43.0 maynot be working, 1.48.2 is not working
 	```bash
-	pip3 install grpcio==1.39.0
+	pip install grpcio==1.39.0
 	```
 	- Installing without using cache
 	```bash
-	pip3 install -r requirements.txt --no-cache-dir
+	pip install -r requirements.txt --no-cache-dir
 	```
 	- Change the python version from 3.6 to 3.7
 	```bash

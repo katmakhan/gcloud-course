@@ -93,3 +93,26 @@ go to the following url, to manually access the customizer page, the link is now
 ```
 https://example.com/wp-admin/customize.php
 ```
+
+
+## Do not use Updraft Backup, use All in One WP Migration Instead
+This step didn't worked for me, always use `all in One WP Migration` to migrate single site GCP into Hestia
+- Use Hestia File manager to upload the big files `Import` function inside the plugin doesn't let you upload the whole file, closes suddenly
+- Also restoring backup is only on premium, so install the forked all in one project in the repostory that contains the old version
+
+
+### Some keep points to know, if you are still not listening to me, and wants to take backup with Updraft
+Using the backup will trigger the error in hestia, so change the sql MAX_ALLOWED_PACKET to make it work
+- open SSH terminal
+- sudo -i to get root permission
+```
+nano /etc/mysql/my.cnf
+```
+
+- Change the line: `max_allowed_packet=256M` (obviously adjust size for whatever you need) under the [MYSQLD] section.
+
+- Then press `crtl` +`X` (exit file) and then `Y` then `Enter`
+
+```
+service mysqld restart
+```
