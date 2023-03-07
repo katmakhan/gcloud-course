@@ -114,5 +114,16 @@ nano /etc/mysql/my.cnf
 - Then press `crtl` +`X` (exit file) and then `Y` then `Enter`
 
 ```
-service mysqld restart
+service mysql restart
+```
+### Sometimes "DATABASE PERMISSION ERROR"
+- This is caused when mariadb is not working properly, you can login as root and then type 
+```
+systemctl status mysql
+```
+
+If there is an error while running the mariadb, the reason maybe due to insufficient space, all you have to do is clear the old backups and restart the db.
+
+```
+systemctl start mysql
 ```

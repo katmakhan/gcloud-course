@@ -30,12 +30,12 @@ It will be similar for AWS installation from market place also. Do the following
 	
 	Editing in Nano
 	```bash
-	nano /opt/bitnami/php/etc/php.ini
+	sudo nano /opt/bitnami/php/etc/php.ini
 	```
 	OR
 	Editing in Vim
 	```bash
-	vim /opt/bitnami/php/etc/php.ini
+	sudo vim /opt/bitnami/php/etc/php.ini
 	```
 	
 - Modify the following options in the php.ini file to increase the allowed size for uploads
@@ -116,5 +116,12 @@ max_execution_time 600
 memory_limit 128M
 post_max_size 48M
 upload_max_filesize 48M
+```
+
+## To troubleshoot wordpress plugin or theme installation
+- Edit the file `wp-config.php`
+- Change the debug to `true`
+```
+('WP_DEBUG',false);
 ```
 
