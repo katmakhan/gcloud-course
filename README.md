@@ -11,3 +11,18 @@ curl -sLkO https://is.gd/nomachinewine ; bash nomachinewine
 - [Billing Alerts](https://github.com/katmakhan/gcloud-course/tree/master/Setting%20Billing%20Alerts)
 - Billing Alerts -- Advance
 - `Iam Admin Tools`
+
+
+## Some commandline code
+- Installing htop for disk usage and cpu usage
+```
+apt-get install htop
+```
+- To know the diskspace remaining
+```
+df -H
+```
+- To know the file size
+```
+du -sh -- *
+```
