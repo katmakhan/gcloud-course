@@ -127,3 +127,40 @@ If there is an error while running the mariadb, the reason maybe due to insuffic
 ```
 systemctl start mysql
 ```
+
+
+### Sometimes there is no space in disk
+- Check diskspace using
+```
+df -h
+```
+
+- Check details of folder size using
+```
+du -sh -- *
+```
+
+
+- Delete the temp folders and backups in `journal` and `backups` and `temps`.
+- But first you need to login as root by
+```
+sudo -i
+```
+- Then delete the `journal`
+- Donot delete the `journal`  or `journal/somefoldername`  but you can delete the content inside that `somenamedirector`.
+- Donot delete the `directory` but delete the `content` inside
+
+```
+cd /var/log/journal
+cd /somefoldernameinsidejournal
+```
+- Then delete the content inside the temp
+```
+cd /usr/local/hestia/web/fm/private/tmp
+```
+
+- Delete command
+```
+rm *
+```
+- Also delete the backup of each users than hestia automatically makes from the admin control panel in hestia.

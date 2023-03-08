@@ -20,7 +20,7 @@ apt-get install htop
 ```
 - To know the diskspace remaining
 ```
-df -H
+df -h
 ```
 - To know the file size
 ```
