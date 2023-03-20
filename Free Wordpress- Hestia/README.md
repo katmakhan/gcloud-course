@@ -67,6 +67,31 @@ https://hcp.<domain.com>:2083/login/
 - Then `save`
 - If you find connection error, go to `cloudflare` and change the SSL from `flexible` to `strict` mode
 
+
+### Go and add INGRESS Rule
+- go to Compute Instance
+```
+Compute>Instances>Instance details
+```
+- go to VNIC
+```
+Primary VNIC> subnet >Security List >Default security List
+```
+- Add Ingress Rules
+- Set `Source` CIDR to
+```
+0.0.0.0/0
+```
+- Set `description` to
+```
+hestia
+```
+- Set IP Protocol to `TCP`
+- Set DestinationPort Ranges
+```
+2083,80,443,143,993,110,995,25,465,587
+```
+
 ### Install Wordpress
 - In the Edit option under `Add web domain`, click on `Quick install app`
 - Then install wordpress
