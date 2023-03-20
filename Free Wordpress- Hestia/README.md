@@ -189,3 +189,28 @@ cd /usr/local/hestia/web/fm/private/tmp
 rm *
 ```
 - Also delete the backup of each users than hestia automatically makes from the admin control panel in hestia.
+
+
+## Adding FTP Clinet
+- Under the advance settings
+- Create `username` and `password`
+- and click `save`
+- The username will be `user_ftpusername`
+
+## Add the ftp ports to the `oracle` network policies
+- VCN -> networkname -> subnet -> securitylist -> add Ingress Rule
+- Keep the protocol as `TCP`
+- Then description as `FTP`
+- CIDR
+```
+0.0.0.0/0
+```
+- Ports
+```
+20,21,12000-121000
+```
+
+
+## Connect via FileZila
+- Host- the Ip address
+- 
