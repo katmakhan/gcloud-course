@@ -112,6 +112,54 @@ sudo -i
 v-change-user-password admin <newpassword>
 ```
 
+## Backup Hestia User
+- Login via SSH
+- Become root
+```
+sudo -i
+```
+- Move into Backups
+```
+cd backup
+```
+- Installed Users is in 
+```
+cd home
+```
+- Go directly into private folder
+```
+cd /home/kcymadmin/web/kcymdioceseofpalghat.in/private
+```
+- For example `/home/kcymadmin/web/kcymdioceseofpalghat.in/private/hestiabackups`
+- Copy the files in `FTP` location to actual `backup`
+```
+cp hestiabackups /backup 
+cp * /backup
+mv * /backup
+```
+- If you wanna remove the hestiabackup folder then use `rm -d hestiabackup`
+
+## Restore Hestia user
+- Go inside `backup` folder
+```
+cd /backup
+```
+- Then restore user
+```
+sudo /usr/local/hestia/bin/v-restore-user  username username.date.tar
+```
+
+## Some things to note while copying and pasting in folders
+If you moved, try copying from backup to private folder, that may have to change the file permission to be accesible by filezila or file manager
+
+- To know the chmod
+```
+stat --format '%a' <file> 
+```
+- To make them downloadable 640 makes them readable but not downloadable
+```
+chmod 644 * 
+```
 
 ## Wordpress 6.1 Customizer missing
 go to the following url, to manually access the customizer page, the link is now missing in the new update
@@ -207,10 +255,17 @@ rm *
 ```
 - Ports
 ```
-20,21,12000-121000
+20,21,12000-12100
 ```
 
 
 ## Connect via FileZila
-- Host- the Ip address
-- 
+- Host- the Ip address of the oracle machine/ gcp
+- ftpusername - that you created (username_ftpusername)
+- password
+- Leave the rest as default
+- You can transfer big files using this method
+- Hesita limits upto 1GB with their default file manager
+- The filezila protocol gets upto 7.2-10 mbps transfer speeds.
+- Even if you try disabling proxing from `cloudflare` or increasing the `apache` config to `10GB` uploads.
+- This method works without any hazzle.
