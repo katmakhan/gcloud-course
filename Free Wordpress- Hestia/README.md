@@ -32,7 +32,7 @@ bash hst-install.sh
 ## Creating the hestia panel and basic setting up
 - Type `y` to install the dependencies
 - Enter the email id for admin
-- Enter the host address as <hcp.domain.com>
+- Enter the FQDN host address as <hcp.domain.com>
 - Remember the admin password after the installation
 
 
@@ -73,7 +73,7 @@ https://hcp.<domain.com>:2083/login/
 ```
 Compute>Instances>Instance details
 ```
-- go to VNIC
+- go to Attached VNIC on Left side
 ```
 Primary VNIC> subnet >Security List >Default security List
 ```
@@ -92,6 +92,23 @@ hestia
 2083,80,443,143,993,110,995,25,465,587
 ```
 
+### Install cloudflare origin certificate
+
+- Install the origin certificate inside the server
+```
+sudo su -
+wget https://developers.cloudflare.com/ssl/static/origin_ca_rsa_root.pem
+mv origin_ca_rsa_root.pem origin_ca_rsa_root.crt
+cp origin_ca_rsa_root.crt /usr/local/share/ca-certificates
+update-ca-certificates
+```
+- Then go to `cloudflare`, to `SSL` section
+- click on `origin server`
+- click on `create certificate`
+- Copy the 	`public` and `private` keys into the hestia dashboard.
+- If there is any error, make sure, you installed the certificate installer first
+- Then only change the `self signed` keys
+
 ### Install Wordpress
 - In the Edit option under `Add web domain`, click on `Quick install app`
 - Then install wordpress
@@ -109,7 +126,7 @@ v-change-user-password admin <newpassword>
 - cloudflare doesn't allow port 8083, so change that port using the command
 ```
 sudo -i
-v-change-user-password admin <newpassword>
+v-change-sys-port 2083
 ```
 
 ## Backup Hestia User
