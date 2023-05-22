@@ -52,6 +52,47 @@ bash hst-install.sh
 https://hcp.<domain.com>:2083/login/
 ```
 
+## Error Http to Https
+If you get error like
+```
+"The plain HTTP request was sent to HTTPS port"
+```
+That is basically due to SSL configuration in cloudflare.
+
+- Change the SSL/TLS certificate to `full` and not `flexible`
+- Also make sure your port is changed to 2083
+```
+v-change-sys-port 2083
+```
+- Restart hestia 
+```
+service hestia restart
+```
+- Check if the config file is updated
+```
+cat /usr/local/hestia/nginx/conf/nginx.conf
+```
+- It should have
+```
+ # Vhost
+        server {
+                listen              8083 ssl;
+                server_name         _;
+                root                /usr/local/hestia/web;
+                # Fix error "The plain HTTP request was sent to HTTPS port"
+                error_page          497 https://$host:$server_port$request_uri;
+                error_page          403 /error/404.html;
+                error_page          404 /error/404.html;
+                error_page          410 /error/410.html;
+                error_page          500 501 502 503 504 505 /error/50x.html;
+                ssl_certificate     /usr/local/hestia/ssl/certificate.crt;
+                ssl_certificate_key /usr/local/hestia/ssl/certificate.key;
+
+                location / {
+                        expires off;
+                        index   index.php;
+                }
+```
 ### Setting Up Hestia
 - Login to hestia with admin or use the SSH terminal to reset the password
 - After login, click on create web domain
