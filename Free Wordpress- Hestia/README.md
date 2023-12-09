@@ -334,7 +334,7 @@ rm *
     nano /usr/local/hestia/web/fm/configuration.php
     ```
   - Change to make it into 2GB or More
-   ```shell
+    ```shell
     $dist_config["frontend_config"]["upload_max_size"] = 2* 1024 * 1024 * 1024;
     ```
   
