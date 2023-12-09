@@ -327,3 +327,14 @@ rm *
 - The filezila protocol gets upto 7.2-10 mbps transfer speeds.
 - Even if you try disabling proxing from `cloudflare` or increasing the `apache` config to `10GB` uploads.
 - This method works without any hazzle.
+
+  ## Increase upload size in filemanager
+  - It defaults at 1GB, but you can change it
+    ```shell
+    nano /usr/local/hestia/web/fm/configuration.php
+    ```
+  - Change to make it into 2GB or More
+   ```shell
+    $dist_config["frontend_config"]["upload_max_size"] = 2* 1024 * 1024 * 1024;
+    ```
+  
