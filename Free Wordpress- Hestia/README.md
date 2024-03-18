@@ -224,7 +224,10 @@ go to the following url, to manually access the customizer page, the link is now
 ```
 https://example.com/wp-admin/customize.php
 ```
-
+## Chanog hostname
+```console
+/usr/local/hestia/bin/v-change-sys-hostname <hcp.domain.com>
+```
 
 ## Do not use Updraft Backup, use All in One WP Migration Instead
 This step didn't worked for me, always use `all in One WP Migration` to migrate single site GCP into Hestia
