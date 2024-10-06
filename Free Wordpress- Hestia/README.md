@@ -23,8 +23,9 @@ apt-get install wget
 ```
 
 - Run the installer
+Might have to use `-f` to force the install
 ```
-bash hst-install.sh
+bash hst-install.sh -f
 ```
 
 ---
